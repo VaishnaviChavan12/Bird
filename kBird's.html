@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>kBird's</title>
+    <style>
+        body {
+            padding: 0%;
+            margin: 0%;
+            overflow: hidden;
+            line-height: 1.5 !important;
+            font-family: 'Times New Roman', Times, serif !important;
+            margin-bottom: 100px;
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="Images/Icons/Bird_Side_Icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div style="background-color:black" class="fixed-top">
+        <img src="Images/Icons/site-icon.png" alt="site" id="siteIcon">
+        <div class="siteName">kBird's</div>
+        <p
+            style="font-size:50px;text-align: center;width: 100%;margin-bottom: 0%; color: palevioletred;margin-top: -1em">
+            Let's know Bird's
+        <p
+            style="font-size: 15px; text-align: center;margin-top: -10px;padding-left: 333px;margin-bottom: 0px; color: pink;">
+            Just like the rooster, ready to seize the day! </p>
+        </p>
+    </div>
+
+    <div class="container fixed-top">
+        <div class="content" style="list-style-type: none;">
+            <div class="menu">
+                <li class="nav-item">
+                    <a class="nav-link selected-link" href="Gallery.html" id="page_link1">
+                        <img src="Images/Icons/galleryIcon.png">
+                        Gallery
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Explore.html" id="page_link2">
+                        <img src="Images/Icons/info_Icon.png" style="text-align: center;">
+                        Explore
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="News.html" id="page_link3">
+                        <img src="Images/Icons/news_Icon.png" style="text-align: center;">
+                        News
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Tweets.html" id="page_link5">
+                        <img src="Images/Icons/tweets.png" style="text-align: center;">
+                        Tweets
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html" id="page_link4">
+                        <img src="Images/Icons/about_Icon.png">
+                        About
+                    </a>
+                </li>
+            </div>
+        </div>
+        <div class="sidebar" id="openingPage">
+            <div>
+                <iframe src="Gallery.html" id="myFrame">
+
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // To open a Gallery
+        document.getElementById("page_link1").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("myFrame").src = "Gallery.html";
+            document.getElementById("myFrame").style.display = "block";
+        });
+
+        //To open the Explore
+        document.getElementById("page_link2").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("myFrame").src = "Explore.html";
+            document.getElementById("myFrame").style.display = "block";
+        });
+
+        //To open the News
+        document.getElementById("page_link3").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("myFrame").src = "News.html";
+            document.getElementById("myFrame").style.display = "block";
+        });
+
+        //To open the About
+        document.getElementById("page_link4").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("myFrame").src = "About.html";
+            document.getElementById("myFrame").style.display = "block";
+        });
+
+        //To open the Tweetring
+        document.getElementById("page_link5").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("myFrame").src = "Tweets.html";
+            document.getElementById("myFrame").style.display = "block";
+        });
+
+        //To highlight the selected link
+        const links = document.querySelectorAll('.nav-link');
+
+        // Add click event listeners to each link
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Prevent the default behavior of the link (e.g., navigating to a new page)
+
+                // Remove the 'selected-link' class from all links
+                links.forEach(link => {
+                    link.classList.remove('selected-link');
+                });
+
+                // Add the 'selected-link' class to the clicked link
+                e.target.classList.add('selected-link');
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container {
+
+    display: flex; /* Use flexbox to create the layout */
+    min-width: 20% !important; /* Set a maximum width for the container */
+    margin-left: 0; /* Center the container horizontally */
+    min-height: 100%;
+    margin-top: 96px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Define styles for the left content area */
+.content {
+    background-image: url("Images/leftI.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Adjust this as needed */
+    background-attachment: fixed;
+    min-width: 20%; /* Let the content area grow to take available space */
+    text-decoration-line: none;
+    font-size: 25px;
+    margin-left: -2%;
+}
+
+/* Define styles for the right sidebar */
+.sidebar {
+    flex-basis: 200px; /* Set a fixed width for the sidebar */
+    background-image: url("Images/rightI.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-width: 120%;
+}
+
+#myFrame {
+
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border: none;
+}
+
+/* About US page CSS */
+/* Reset some default styles for better consistency */
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Style the navigation bar (you can add styles for navigation links) */
+
+/* Style main content */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style sections */
+section {
+    margin-bottom: 40px;
+}
+
+/* Style the team members */
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 1px;
+    padding: 5px;
+    margin-left: -160px;
+    margin-right: -45px;
+}
+
+#siteIcon {
+    height: 1.7rem;
+    width: 2rem;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    margin-right: 8px;
+}
+
+.nav-item {
+    text-align: center;
+    display: block;
+}
+
+.nav-link {
+    text-decoration-line: none;
+    color: rgb(86, 38, 86);
+    text-align: center;
+}
+
+.selected-link {
+    color: rgb(109, 41, 109);
+    background-color: #aea1a1;
+}
+
+.nav-link:hover {
+    text-decoration-line: none;
+    color: rgb(109, 41, 109);
+    background-color: rgb(210, 210, 221);
+}
+
+.selected-link:hover {
+    /* Use the inherited color (from parent) */
+    color: rgb(109, 41, 109);
+    background-color: #aea1a1;
+}
+
+.siteName {
+    color: palevioletred;
+    font-size: 20px;
+    margin-top: -30px !important;
+    margin-left: 60px;
+}
