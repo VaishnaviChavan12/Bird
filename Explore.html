@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </head>
 
 <body class="container">
@@ -242,42 +243,8 @@
             </table>
         </div>
     </div>
-    <script>
 
-        // Get the input element and table
-        var input = document.getElementById('searchInput');
-        var table = document.getElementById('myTable');
-        const tb_frame = document.getElementById("table_frame");
-
-        // Attach an input event listener to the input field
-        input.addEventListener('input', function (event) {
-            var filter = input.value.toLowerCase();
-            var cells = table.getElementsByTagName('td');
-
-            event.preventDefault();
-
-            // Remove previous highlighting
-            for (var i = 0; i < cells.length; i++) {
-                cells[i].classList.remove('highlighted-cell');
-            }
-
-            // Loop through cells and highlight matching ones
-            for (var i = 0; i < cells.length; i++) {
-                var cell = cells[i];
-                var cellText = cell.innerHTML.toLowerCase();
-                if (cellText.indexOf(filter) > -1) {
-                    cell.classList.add('highlighted-cell');
-                    cell.scrollIntoView({ behavior: 'smooth', block: "center" });
-                    break;
-                }
-            }
-        });
-
-
-    </script>
-
+    <script src="Explore.js"></script>
 </body>
-
-</html>
 
 </html>
